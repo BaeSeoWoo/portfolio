@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>배서우의 포트폴리오</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Pretendard', sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background: linear-gradient(to right, #000000, #111111);
+    }
+    .header-icon-wrap {
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .portfolio-label {
+      font-size: 0.95em; color: #aaa;
+      letter-spacing: 2px; margin-bottom: 10px;
+    }
+    .header-icon-wrap img {
+      width: 100px; margin-bottom: 20px;
+      filter: brightness(1.2);
+    }
+    header h1 { font-size: 2.8em; margin: 0; }
+    header p { opacity: 0.8; margin: 10px 0 0; }
+
+    nav {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 16px;
+      padding: 30px 20px 0; background: #111;
+    }
+    .nav-btn {
+      padding: 12px 24px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .nav-btn:hover,
+    .nav-btn.active {
+      background: #fff;
+      color: #000;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      display: none;
+      padding: 60px 40px;
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      border-radius: 30px;
+      margin-bottom: 60px;
+      position: relative;
+    }
+    section.active { display: block; }
+    section::before {
+      content: "";
+      position: absolute;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 80%);
+      top: -300px; right: -300px;
+      z-index: 0;
+    }
+    section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 8px;
+    }
+
+    ul {
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+    a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 40px 10px;
+      background: #111;
+      color: #888;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-icon-wrap">
+    <span class="portfolio-label">BX PORTFOLIO</span>
+    <img src="붓과팔레트.PNG" alt="BX 아이콘" />
+  </div>
+  <h1>배서우</h1>
+  <p>기획력과 디자인을 겸한 콘텐츠 마케터</p>
+</header>
+
+<nav>
+  <button class="nav-btn active" data-section="about">About</button>
+  <button class="nav-btn" data-section="skills">Skills</button>
+  <button class="nav-btn" data-section="projects">Projects</button>
+  <button class="nav-btn" data-section="links">Links</button>
+</nav>
+
+<main>
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <p>단국대학교 서양화과를 졸업한 콘텐츠 마케터 배서우입니다.  
+    예술적 감각을 기반으로, 브랜딩부터 디자인, 영상 기획, 콘텐츠 전략 수립까지 아우르는 전방위 프로젝트를 수행해왔습니다.  
+    공공기관, 스타트업, 커머스 브랜드 등 다양한 조직과 협업하며, 기획력과 실행력을 균형 있게 발휘하는 데 강점을 가지고 있습니다.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>브랜드 기획:</strong> 핫쇼퍼즈, 일상공상 브랜드 네이밍 및 시각 기획</li>
+      <li><strong>사업 제안서 작성:</strong> 정부지원사업 수주 경험 (소상공인시장진흥공단 외)</li>
+      <li><strong>SNS 콘텐츠 디자인:</strong> 카드뉴스, 썸네일, 배너 등 다양한 포맷 기획 및 제작</li>
+      <li><strong>영상 기획 및 제작:</strong> 보건복지부 콘텐츠 (343만 조회수)</li>
+      <li><strong>툴:</strong> Photoshop, Illustrator, Figma, Premiere Pro, After Effects</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>핫쇼퍼즈 서포터즈 기획:</strong><br>로고, 캐릭터, 네이밍, 운영기획까지 직접 설계. 유쾌한 브랜드 이미지로 1,000 팔로워 유입.</li>
+      <li><strong>일상공상 브랜딩:</strong><br>공동구매 플랫폼 기획 및 피드 정체성 확립. 마감세일 감성 시각화.</li>
+      <li><strong>서울시 트립메이트 리브랜딩:</strong><br>컬러·톤 통일 + 브랜드 피드 재정비로 팔로워 2배 상승.</li>
+      <li><strong>보훈부 초성 이벤트 기획:</strong><br>스토리 초성 퀴즈로 참여율 90% 달성.</li>
+      <li><strong>보건복지부 영상 콘텐츠:</strong><br>시나리오, 콘티, 일러스트, 편집까지 총괄. 릴스 343만 뷰.</li>
+      <li><strong>아이디어스 메인배너 디자인:</strong><br>흑백 일러스트 배너 등록, 후기 평점 100% 달성.</li>
+    </ul>
+  </section>
+
+  <section id="links">
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://www.instagram.com/1303_project/" target="_blank">‘일상공상’ 인스타그램</a></li>
+      <li><a href="https://www.instagram.com/tripmate_korea/" target="_blank">트립메이트 인스타그램</a></li>
+      <li><a href="https://www.youtube.com/watch?v=De8JzTAjz8Y" target="_blank">보건복지부 영상 (1편)</a></li>
+      <li><a href="https://youtu.be/b4I2ZQpXeHs" target="_blank">보건복지부 영상 (2편)</a></li>
+      <li><a href="https://www.instagram.com/ibohun/" target="_blank">‘이달의 독립운동가’ 인스타그램</a></li>
+      <li><a href="https://www.instagram.com/yunjakso/" target="_blank">윤작소 (드로잉 계정)</a></li>
+      <li><a href="https://www.instagram.com/two_circles_one_dot/" target="_blank">개인 작업 아카이빙</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 배서우 | 디자인과 기획으로 일상을 설계합니다.
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.nav-btn');
+  const sections = document.querySelectorAll('main section');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.section;
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      sections.forEach(section => {
+        section.classList.remove('active');
+        if (section.id === target) section.classList.add('active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
